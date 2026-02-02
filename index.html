@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💗</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fbd3e9, #bb377d);
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    img {
+      width: 260px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: white;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: white;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .scroll {
+      margin-top: 25px;
+      font-size: 18px;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    /* 🔒 FIX: Hide any input box completely */
+    input {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="cute">
+
+    <h2>I made something new…</h2>
+    <p>I hope avdel tula 😭</p>
+
+    <p class="scroll">Just scroll slowly 🐾✨</p>
+  </div>
+
+  <!-- 🔒 EXTRA SAFETY (if browser injects input) -->
+  <script>
+    document.querySelectorAll("input").forEach(el => el.remove());
+  </script>
+
+</body>
+</html>
